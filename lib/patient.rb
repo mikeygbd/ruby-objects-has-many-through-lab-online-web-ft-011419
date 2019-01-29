@@ -21,8 +21,8 @@ class Patient
   end
   def doctors
     self.appointments.collect do |appointment|
-      @doctors << appointment.doctor
-      @doctors
+      appointment.doctor
+
     end
   end
 
