@@ -25,14 +25,11 @@ class Doctor
 
   def new_appointment(patient, date)
     Appointment.new(date, patient, self)
-
-
-    # @appointments << appointment
-    # appointment.doctor = self
   end
+
   def patients
-    Appointment.all.collect do |appointment|
-      appointment.patient == self.patient
+    self.appointments.collect do |appointment|
+      appointment.patient
     end
   end
 
