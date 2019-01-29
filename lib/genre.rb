@@ -13,13 +13,13 @@ attr_accessor :name
     @@all
   end
 
-  def songs
+
     def songs
       Song.all.select  do |song|
         song.genre == self
       end
     end
-  end
+
 
   def new_song(name, genre)
     Song.new(name, artist, self)
