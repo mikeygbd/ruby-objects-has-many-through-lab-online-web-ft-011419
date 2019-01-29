@@ -15,8 +15,8 @@ class Patient
 
   def new_appointment(doctor, date)
     Appointment.new(date, self, doctor)
-    @appointments << appointment
-    appointment.patient = self
+    # @appointments << appointment
+    # appointment.patient = self
   end
   def doctors
     self.appointments.collect do |appointment|
