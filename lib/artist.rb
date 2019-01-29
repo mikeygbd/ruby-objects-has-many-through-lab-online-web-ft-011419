@@ -22,7 +22,7 @@ class Artist
 
   def genres
     Song.all.select do |song|
-      song.genre == self
+      song.genre == self.genre
     end
   end
 
