@@ -24,7 +24,7 @@ class Artist
 
   def genres
     Song.all.each do |song|
-      song.genre << genres
+      song.genre == Genre.artist
       @genres
       # binding.pry
     end
