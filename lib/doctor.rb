@@ -18,14 +18,14 @@ class Doctor
 
 
   def new_appointment(patient, date)
-   Appointment.new(date, patient, self)
+
 
     # @appointments << appointment
     # appointment.doctor = self
   end
   def patients
     self.appointments.collect do |appointment|
-      appointment.patient
+      appointment.patient == self
     end
   end
 
